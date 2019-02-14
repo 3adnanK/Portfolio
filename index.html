@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Hello to my portfolio</title>
+  <link rel="stylesheet" type="text/css" href="css/portfolio.css"/>
+  <link href="https://fonts.googleapis.com/css?family=Charm" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Staatliches" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <script src="js/rellax.min.js"></script>
+  <script src="js/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+  <div class="loader"></div>
+  <div class="mouseCircle"></div>
+  <header>
+    <div id="headContent">
+      <div class="big_bubble"></div>
+      <h1 class="presentation moving_presentation">
+        <span class="first_line">Hello, I'm <span class="name">Adnan</span> </span><span class="second_line">I'm a full Stack Developer, who
+        wants to make your imaginary idea to become reality.</span>
+      </h1>
+    </div>
+    <div class="shape_mini shape" data-rellax-speed="7" style="transform: translate3d(0px, 0px, 0px) rotate(45deg);"></div>
+    <div class="shape_medium shape" data-rellax-speed="4" style="transform: translate3d(0px, 0px, 0px) rotate(45deg);"></div>
+    <div class="shape_medium_middle shape"  data-rellax-speed="2" style="transform: translate3d(0px, 0px, 0px) rotate(45deg);"></div>
+  </header>
+  <div class="work_presentation">
+    <h1>My Projects</h1>
+    <div class="project1 project">
+      <p class="pr_desc">
+        Logorain is a website to generate some cool logos using AI.
+      </p>
+      <div class="pr_img_holder">
+          <img src="img/logorain.png" class="pr_img">
+          <div class="overlay pr1_overlay">
+            <a class="pr_link" href="https://www.logorain.com" target="_target">Visit Website</a>
+          </div>
+      </div>
+    </div>
+    <div class="project2 project">
+      <p class="pr_desc">
+        Focus is an opend source website to mix some relaxing sound.
+      </p>
+      <div class="pr_img_holder">
+          <img src="img/focus.png" class="pr_img">
+          <div class="overlay pr2_overlay">
+            <a class="pr_link" href="https://www.logorain.com" target="_target">Visit Website</a>
+          </div>
+      </div>
+    </div>
+    <div class="project3 project">
+      <p class="pr_desc">
+        Logorain-ASCII-Art is an open source project to generate ascii-art from 
+        image.
+      </p>
+      <div class="pr_img_holder">
+          <img src="img/ascii-art.png" class="pr_img">
+          <div class="overlay pr3_overlay">
+            <a class="pr_link" href="https://www.logorain.com" target="_target">Visit Website</a>
+          </div>
+      </div>
+    </div>
+  </div>
+  <div class="skills">
+    <h1>Skills</h1>
+    <div class="console_holder">
+      <pre id="console">
+        Web Development:<br>
+        - HTML5<br>
+        - CSS3<br>
+        - Javascript<br>
+        - jquery<br>
+
+        Programing languages:<br>
+        - Python<br>
+        - C++<br>
+        - C<br>
+        - Swift (IOS development)<br>
+        - GDScript<br>
+        - Java<br>
+        - PHP<br>
+
+        Frameworks:<br>
+        - Django<br>
+
+        Tools:<br>
+        - Git
+        - Github
+        - VSCode
+        - Xcode
+        - Terminal
+
+        Languages:<br>
+        - English
+        - Arabic
+        - Frensh
+
+        Thank you... ❤️
+      </pre>
+    </div>
+  </div>
+  <div class="talk">
+    <h1>You have an idea in mind? Let's talk</h1>
+    <em>Mail Contact: <a class="mail" href="mailto:adnan.kandar@yahoo.com">adnan.kandar@yahoo.com</a></em>
+  </div>
+  <footer>
+    <p class="copyright">
+      &#169; 2019 Designed and developed by Adnan ❤️
+    </p>
+    <div class="social">
+
+    </div>
+  </footer>
+<script>
+
+$(window).on('load', function(){
+
+  $('.loader').attr('class', 'loader done');
+
+  setTimeout(function() {
+    $(':root').css({
+      "overflow":"scroll"
+    });
+  }, 600);
+
+  setTimeout(function() {
+    $('.presentation').attr('class', 'presentation animated');
+  }, 1000, function() {
+    $('.presentation.animated').attr('class', 'presentation animated done');
+  });
+
+  setTimeout(function() {
+    $('.presentation span').animate({
+      "opacity": "1"
+    }, 1400);
+  }, 1800);
+
+});
+
+  $(function() {
+
+    /****************************************
+    *     Setting the projects positions    *
+    *     and show them on scroll When      *
+    *     the postion is reached            *
+    *****************************************/
+
+    let project1Position = $('.project1').position();
+    let project2Position = $('.project2').position();
+    let project3Position = $('.project3').position();
+    let consolePosition = $('.skills').position();
+
+    var project1Reached = false;
+    var project2Reached = false;
+    var project3Reached = false;
+    var consoleReached = false;
+
+    $(window).scroll(function() {
+      let currentPosition = $(window).scrollTop();
+
+      if(currentPosition >= (project1Position.top - 300) && !project1Reached) {
+        $('.project1 .pr_desc').fadeIn(1000);
+        $('.project1 .pr_desc').addClass('animated');
+        project1Reached = true
+      }
+
+      if(currentPosition >= (project2Position.top - 300) && !project2Reached) {
+        /*$('.mobileapp').addClass("show");
+        $('.mobileapp_description').addClass("present_left");*/
+        $('.empty').remove();
+        $('.project2 .pr_desc').fadeIn(1000);
+        $('.project2 .pr_desc').addClass('animated');
+        project2Reached = true
+      }
+
+      if(currentPosition >= (project3Position.top - 300) && !project3Reached) {
+        /*$('.webscrape').addClass("show");
+        $('.webscrape_description').addClass("present_right");*/
+        $('.project3 .pr_desc').fadeIn(1000);
+        $('.project3 .pr_desc').addClass('animated');
+        projectReached = true
+      }
+      //start typewriting on console
+      if(currentPosition >= (consolePosition.top - 300) && !consoleReached) {
+        typewriter(text, 0);
+        consoleReached = true
+      }
+
+    });
+
+    /************************************
+    *         Bubble animation          *
+    ************************************/
+
+    var startingPoint = 80;
+    var endPoint = 290
+    var big_bubble_animation = function() {
+      $('.big_bubble').animate({
+        borderTopLeftRadius: (Math.random() * startingPoint) + endPoint,
+        borderTopRightRadius: (Math.random() * startingPoint) + endPoint,
+        borderBottomLeftRadius: (Math.random() * startingPoint) + endPoint,
+        borderBottomRightRadius: (Math.random() * startingPoint) + endPoint
+      }, 600, big_bubble_animation);
+    }
+
+    var bubble_animation = function() {
+      $('.bubble').animate({
+        borderTopLeftRadius: (Math.random() * startingPoint) + endPoint,
+        borderTopRightRadius: (Math.random() * startingPoint) + endPoint,
+        borderBottomLeftRadius: (Math.random() * startingPoint) + endPoint,
+        borderBottomRightRadius: (Math.random() * startingPoint) + endPoint
+      }, 600, bubble_animation);
+    }
+
+    setTimeout(big_bubble_animation(), 1200);
+    setTimeout(bubble_animation(), 1200);
+
+    /*****************************************************
+    *    Manipulating shapes When the mouse is moving    *
+    *****************************************************/
+
+    $(window).mousemove(function(ev) {
+        let mouseX = ev.pageX;
+        let mouseY = ev.pageY;
+
+        let circle = $('.mouseCircle');
+        $(circle).animate({
+          'left': mouseX + (5),
+          'top': mouseY + (5)
+        }, 16);
+    });
+
+    /************************************
+    *            Setup rellax           *
+    ************************************/
+
+    var rellax = new Rellax('.moving_presentation', {
+      speed: 2,
+      center: false,
+      wrapper: null,
+      round: true,
+      vertical: true,
+      horizontal: false
+    });
+
+    var rellax2 = new Rellax('.big_bubble', {
+      speed: 10,
+      center: false,
+      wrapper: null,
+      round: true,
+      vertical: true,
+      horizontal: false
+    });
+
+
+    var rellax3 = new Rellax('.shape_mini', {
+      speed: 7,
+      center: false,
+      wrapper: null,
+      round: true,
+      vertical: true,
+      horizontal: false
+    });
+
+    var rellax4 = new Rellax('.shape_medium', {
+      speed: 4,
+      center: false,
+      wrapper: null,
+      round: true,
+      vertical: true,
+      horizontal: false
+    });
+
+    var rellax5 = new Rellax('.shape_medium_middle', {
+      speed: 2,
+      center: true,
+      wrapper: null,
+      round: true,
+      vertical: true,
+      horizontal: false
+    });
+
+    /************************
+    *      Typewriter       *
+    *************************/
+    var text = $('#console').text();
+
+    $('#console').text('');
+
+    function typewriter(text, i) {
+
+      if(i < text.length) {
+        $('#console').html(text.substring(0, i+1))
+        i++;
+        setTimeout(function() {
+          typewriter(text, i);
+        }, 70);
+      }
+
+      $('#console').scrollTop(1000)
+    }
+
+    
+
+  });
+
+</script>
+</body>
+</html>
