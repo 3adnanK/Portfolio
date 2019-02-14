@@ -22,40 +22,9 @@ body {
   transition-property: transform;
 }
 
-/*
-.mouseCircle {
-  width: 40px;
-  height: 40px;
-  background-color: rgba(83, 80, 239, 0.56);
-  border: 3px solid rgb(155, 167, 236);
-  box-shadow: rgb(13, 35, 56) 0px 0px 15px;
-  z-index: 1000;
-  border-radius: 50%;
-  position: absolute;
-}
-*/
-
 .done {
   transform: scale(0);
 }
-/*
-nav {
-  display: flex;
-  justify-content: left;
-  position: relative;
-}
-
-nav h1 {
-  text-align: center;
-  font-family: 'Charm', cursive;
-  background-color: #ffff73;
-  margin: 0px;
-  padding: 20px;
-  position: fixed;
-  top: 0;
-  color: #656565;
-  box-shadow: 1px 3px 15px -4px black;
-}*/
 
 #headContent {
   height: 500px;
@@ -260,6 +229,7 @@ nav h1 {
 }
 
 .pr_img {
+  width: 100%;
   height: 100%;
 }
 
