@@ -113,29 +113,29 @@
   </footer>
 <script>
 
-$(window).on('load', function(){
+  window.onload = function(){
 
-  $('.loader').attr('class', 'loader done');
+    $('.loader').attr('class', 'loader done');
 
-  setTimeout(function() {
-    $(':root').css({
-      "overflow":"scroll"
+    setTimeout(function() {
+      $(':root').css({
+        "overflow":"scroll"
+      });
+    }, 600);
+
+    setTimeout(function() {
+      $('.presentation').attr('class', 'presentation animated');
+    }, 1000, function() {
+      $('.presentation.animated').attr('class', 'presentation animated done');
     });
-  }, 600);
 
-  setTimeout(function() {
-    $('.presentation').attr('class', 'presentation animated');
-  }, 1000, function() {
-    $('.presentation.animated').attr('class', 'presentation animated done');
-  });
+    setTimeout(function() {
+      $('.presentation span').animate({
+        "opacity": "1"
+      }, 1400);
+    }, 1800);
 
-  setTimeout(function() {
-    $('.presentation span').animate({
-      "opacity": "1"
-    }, 1400);
-  }, 1800);
-
-});
+  };
 
   $(function() {
 
@@ -181,7 +181,7 @@ $(window).on('load', function(){
         projectReached = true
       }
       //start typewriting on console
-      if(currentPosition >= (consolePosition.top - 300) && !consoleReached) {
+      if(currentPosition >= (consolePosition.top - 600) && !consoleReached) {
         typewriter(text, 0);
         consoleReached = true
       }
@@ -214,21 +214,6 @@ $(window).on('load', function(){
 
     setTimeout(big_bubble_animation(), 1200);
     setTimeout(bubble_animation(), 1200);
-
-    /*****************************************************
-    *    Manipulating shapes When the mouse is moving    *
-    *****************************************************/
-
-    $(window).mousemove(function(ev) {
-        let mouseX = ev.pageX;
-        let mouseY = ev.pageY;
-
-        let circle = $('.mouseCircle');
-        $(circle).animate({
-          'left': mouseX + (5),
-          'top': mouseY + (5)
-        }, 16);
-    });
 
     /************************************
     *            Setup rellax           *
