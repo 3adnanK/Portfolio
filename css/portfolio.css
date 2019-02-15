@@ -173,7 +173,7 @@ body {
 .project .pr_desc {
   font-size: 60px;
   width: 50%;
-  font-family: sans-serif;
+  font-family: 'Roboto', sans-serif;
   margin: 0;
   align-self: center;
   padding-bottom: 35px;
@@ -272,7 +272,6 @@ body {
   width: 55%;
   margin: auto;
   margin-bottom: 60px;
-  font-family: 'Roboto';
   box-sizing: border-box;
 }
 
@@ -300,12 +299,13 @@ body {
 #console {
   background: #171717;
   color: #b1ffd9;
-  font-size: 16px;
+  font-size: 22px;
   padding: 20px;
   height: 350px;
-  overflow-y: scroll !important;
+  overflow-y: scroll;
   line-height: 1.6;
   box-shadow: 0px 0px 15px #7d7a7a;
+  font-family: 'VT323', monospace;
 }
 
 .talk {
@@ -420,7 +420,7 @@ footer p {
     width: 150px;
     height: 150px;
     left: 30%;
-    bottom: 20%;
+    bottom: 10%;
   }
 
 }
