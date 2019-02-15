@@ -211,11 +211,11 @@ body {
 }
 
 .pr_img_holder:hover .pr1_overlay {
-  background: rgba(255, 61, 96, 0.9);
+  background: rgba(34, 111, 84, 0.9);
 }
 
 .pr_img_holder:hover .pr2_overlay {
-  background: rgba(34, 111, 84, 0.9);
+  background: rgba(255, 61, 96, 0.9);
 }
 
 .pr_img_holder:hover .pr3_overlay {
@@ -243,11 +243,11 @@ body {
 }
 
 .pr1_overlay {
-  background: rgba(255, 61, 96, 0.25);
+  background: rgba(34, 111, 84, 0.25);
 }
 
 .pr2_overlay {
-  background: rgba(34, 111, 84, 0.25);
+  background: rgba(255, 61, 96, 0.25);
 }
 
 .pr3_overlay {
