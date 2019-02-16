@@ -271,8 +271,17 @@
     *      Typewriter       *
     *************************/
     var text = $('#console').text();
+    var autoScroll = true;
 
     $('#console').text('');
+
+    $('#console').on('mouseenter', function() {
+      autoScroll = false;
+    });
+
+    $('#console').on('mouseleave', function() {
+      autoScroll = true;
+    })
 
     function typewriter(text, i) {
 
@@ -284,10 +293,10 @@
         }, 70);
       }
 
-      $('#console').scrollTop(1000)
+      if(autoScroll) {
+        $('#console').scrollTop(1000);
+      }
     }
-
-    
 
   });
 
