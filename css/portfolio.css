@@ -103,12 +103,16 @@ body {
   transition-property: transform;
 }
 
+.shape {
+  border-radius: 12px;
+  position: absolute;
+  z-index: -10;
+}
+
 .shape_mini {
     width: 80px;
     height: 80px;
     background: #5000F1;
-    border-radius: 12px;
-    position: absolute;
     left: 180px;
     top:220px;
 }
@@ -117,8 +121,6 @@ body {
     width: 120px;
     height: 120px;
     background: #FFBF62;
-    border-radius: 12px;
-    position: absolute;
     right: 180px;
     top:350px;
 }
@@ -127,8 +129,6 @@ body {
   width: 200px;
   height: 200px;
   background: #FF3D60; /*#0A2239;*/
-  border-radius: 12px;
-  position: absolute;
   left: 40%;
   bottom:30px;
 }
